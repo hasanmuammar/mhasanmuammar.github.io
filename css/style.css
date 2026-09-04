@@ -228,26 +228,33 @@ a {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 35px;
+  gap: 16px;
+  margin-top: 2.5rem;
 }
 
 .button {
   display: inline-flex;
-  min-height: 46px;
+  min-height: 48px;
   align-items: center;
   justify-content: center;
-  padding: 10px 18px;
-  border: 1px solid var(--strong-line);
-  border-radius: 999px;
+  padding: 12px 24px;
+  border: 1.5px solid var(--text);
+  border-radius: 8px;
   text-decoration: none;
   font-size: 0.9rem;
-  font-weight: 700;
-  transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  transition: all 200ms ease;
+  cursor: pointer;
 }
 
 .button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.button:focus-visible {
+  outline: none;
 }
 
 .button-primary {
@@ -256,14 +263,32 @@ a {
   color: var(--button-text);
 }
 
+.button-primary:hover {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+}
+
 .button-secondary {
   background: transparent;
+  border-color: var(--text);
+  color: var(--text);
+}
+
+.button-secondary:hover {
+  background: var(--text);
+  color: var(--bg);
 }
 
 .button-ghost {
   background: transparent;
-  border-color: var(--strong-line);
+  border-color: var(--text);
   color: var(--text);
+}
+
+.button-ghost:hover {
+  background: var(--surface-2);
+  border-color: var(--text);
 }
 
 .cv-btn {
@@ -274,19 +299,25 @@ a {
 .about-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 2rem;
+  gap: 16px;
+  margin-top: 2.5rem;
 }
 
 .hero-card {
   display: grid;
-  gap: 1.25rem;
-  padding: 1.75rem;
+  gap: 1.5rem;
+  padding: 2rem;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: 12px;
   background: var(--surface);
-  box-shadow: var(--shadow);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   justify-items: start;
+  transition: all 200ms ease;
+}
+
+.hero-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .profile-photo {
@@ -312,7 +343,7 @@ a {
 }
 
 .section {
-  padding: var(--space-2xl) 0;
+  padding: 5rem 0;
   border-top: 1px solid var(--line);
 }
 
@@ -323,7 +354,7 @@ a {
 .section-grid {
   display: grid;
   grid-template-columns: minmax(230px, 0.7fr) minmax(0, 1.3fr);
-  gap: clamp(50px, 10vw, 150px);
+  gap: clamp(40px, 8vw, 120px);
 }
 
 .section h2 {
@@ -444,7 +475,7 @@ a {
 }
 
 .section-heading {
-  margin-bottom: 55px;
+  margin-bottom: 3.5rem;
 }
 
 .section-heading h2 {
@@ -454,17 +485,27 @@ a {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1px;
+  gap: 16px;
   overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--line);
+  border: none;
+  background: transparent;
 }
 
 .skill-card {
   grid-column: span 4;
-  min-height: 220px;
-  padding: 1.75rem;
+  min-height: 240px;
+  padding: 2rem;
   background: var(--surface);
+  border: none;
+  transition: all 200ms ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skill-card:hover {
+  background: var(--surface-2);
+  transform: translateY(-2px);
 }
 
 .skill-card:nth-child(4),
@@ -501,7 +542,7 @@ a {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 24px;
 }
 
 .project-card {
@@ -509,11 +550,19 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.875rem;
+  padding: 2rem;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: 12px;
   background: var(--surface);
   cursor: default;
+  transition: all 200ms ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
 
 .project-card h3 {
@@ -531,7 +580,7 @@ a {
 .contact-grid {
   display: grid;
   grid-template-columns: 0.7fr 1.3fr;
-  gap: clamp(50px, 10vw, 150px);
+  gap: clamp(40px, 8vw, 120px);
 }
 
 .contact-links {
@@ -543,20 +592,32 @@ a {
   display: grid;
   grid-template-columns: 24px 160px 1fr;
   gap: 20px;
-  padding: 18px 0;
+  padding: 1.25rem 0;
   border-bottom: 1px solid var(--line);
   text-decoration: none;
   align-items: center;
+  transition: all 200ms ease;
+}
+
+.contact-links a:hover {
+  padding-left: 8px;
+  color: var(--accent);
 }
 
 .contact-icon {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
   background: var(--surface-2);
   color: var(--text);
+  transition: all 200ms ease;
+}
+
+.contact-links a:hover .contact-icon {
+  background: var(--accent);
+  color: var(--button-text);
 }
 
 .contact-links span {
@@ -714,7 +775,7 @@ a {
   }
 
   .section {
-    padding: 85px 0;
+    padding: 4rem 0;
   }
 
   .skills-grid,
