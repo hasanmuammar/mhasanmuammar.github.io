@@ -260,6 +260,24 @@ a {
   background: transparent;
 }
 
+.button-ghost {
+  background: transparent;
+  border-color: var(--strong-line);
+  color: var(--text);
+}
+
+.cv-btn {
+  display: inline-flex;
+  margin-top: 1rem;
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
 .hero-card {
   display: grid;
   gap: 1.25rem;
@@ -326,6 +344,75 @@ a {
   color: var(--text);
   font-size: clamp(1.1rem, 1.8vw, 1.35rem);
   line-height: 1.55;
+}
+
+.divider {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.work-list,
+.tech-list,
+.approach-list {
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.work-list dt,
+.tech-list li,
+.approach-list li {
+  margin-bottom: 0.75rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.work-list dt {
+  font-weight: 650;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.work-list dd {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  max-width: 720px;
+}
+
+.tech-list li,
+.approach-list li {
+  list-style: disc inside;
+}
+
+.tech-list li::marker,
+.approach-list li::marker {
+  color: var(--accent);
+}
+
+.approach-list li {
+  margin-bottom: 1rem;
+}
+
+.approach-list li strong {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 400;
+}
+
+.positioning {
+  margin-top: 2rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: var(--surface-2);
+  font-size: 0.82rem;
+  font-weight: 650;
+  line-height: 1.8;
+}
+
+.section h3 {
+  margin: 2rem 0 1rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.025em;
 }
 
 .profile-details {
