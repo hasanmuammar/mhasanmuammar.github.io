@@ -1,1 +1,0 @@
-Design refinement branch: modern minimalist portfolio adjustments. No third-party runtime dependencies added.
