@@ -1,37 +1,15 @@
-const root = document.documentElement;
-const themeToggle = document.querySelector(".theme-toggle");
-const themeIcon = document.querySelector(".theme-icon");
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const year = document.querySelector("#year");
 
-const THEME_KEY = "theme";
+// ── System theme sync ────────────────────────────────────────
 
-function getTheme() {
-  try { return localStorage.getItem(THEME_KEY); }
-  catch { return null; }
-}
-
-function saveTheme(theme) {
-  try { localStorage.setItem(THEME_KEY, theme); }
-  catch { /* storage unavailable */ }
-}
-
-function updateThemeButton() {
-  if (!themeToggle || !themeIcon) return;
-  const isDark = root.dataset.theme === "dark";
-  themeIcon.textContent = isDark ? "○" : "◐";
-  const label = isDark ? "Switch Theme to light" : "Switch Theme to dark";
-  themeToggle.setAttribute("aria-label", label);
-  themeToggle.title = label;
-}
-
-themeToggle?.addEventListener("click", () => {
-  const next = root.dataset.theme === "dark" ? "light" : "dark";
-  root.dataset.theme = next;
-  saveTheme(next);
-  updateThemeButton();
-});
+const root = document.documentElement;
+const mq = window.matchMedia("(prefers-color-scheme: dark)");
+const applySystemTheme = () => {
+  root.dataset.theme = mq.matches ? "dark" : "light";
+};
+mq.addEventListener("change", applySystemTheme);
 
 // ── Mobile menu ──────────────────────────────────────────────
 
@@ -78,4 +56,3 @@ window.addEventListener("resize", () => {
 // ── Footer year ──────────────────────────────────────────────
 
 if (year) year.textContent = new Date().getFullYear();
-updateThemeButton();

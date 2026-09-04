@@ -20,11 +20,8 @@
   <link rel="stylesheet" href="css/style.css">
   <script>
     (() => {
-      const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      let saved = null;
-      try { saved = localStorage.getItem("theme"); }
-      catch { /* storage unavailable */ }
-      document.documentElement.dataset.theme = saved || (systemDark ? "dark" : "light");
+      const mq = window.matchMedia("(prefers-color-scheme: dark)");
+      document.documentElement.dataset.theme = mq.matches ? "dark" : "light";
     })();
   </script>
   <script src="js/script.js" defer></script>
@@ -47,10 +44,6 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <button class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
-          <span class="theme-icon" aria-hidden="true">◐</span>
-          <span class="theme-label">Theme</span>
-        </button>
       </nav>
     </div>
   </header>

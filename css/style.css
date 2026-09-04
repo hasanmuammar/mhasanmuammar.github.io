@@ -135,20 +135,6 @@ a {
   cursor: pointer;
 }
 
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 7px 0;
-  font: inherit;
-  font-size: 0.85rem;
-  font-weight: 650;
-}
-
-.theme-icon {
-  font-size: 1rem;
-}
-
 .menu-toggle {
   display: none;
 }
@@ -549,16 +535,8 @@ a {
     overflow: hidden;
   }
 
-  .site-nav a,
-  .theme-toggle {
+  .site-nav a {
     padding: 12px 8px;
-  }
-
-  .theme-toggle {
-    justify-content: flex-start;
-    border-top: 1px solid var(--line);
-    margin-top: 6px;
-    padding-top: 16px;
   }
 
   .hero {
