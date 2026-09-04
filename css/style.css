@@ -225,17 +225,18 @@ a {
   border-radius: var(--radius);
   background: var(--surface);
   box-shadow: var(--shadow);
+  justify-items: start;
 }
 
-.profile-mark {
-  width: 58px;
-  height: 58px;
-  display: grid;
-  place-items: center;
+.profile-photo {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border: 1px solid var(--strong-line);
   border-radius: 50%;
-  font-size: 1.25rem;
-  font-weight: 760;
+  margin: 0 auto;
+  display: block;
 }
 
 .card-label {

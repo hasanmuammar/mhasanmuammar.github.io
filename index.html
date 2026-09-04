@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,11 +12,13 @@
   <meta property="og:description" content="English-Arabic Language Trainer and Islamic Education Mentor for Kids and Family.">
   <meta property="og:image" content="favicon.svg">
   <link rel="canonical" href="https://muhammad-hasan.github.io/muhammad-hasan/">
-  <title>Muhammad Manjur Hasan Muammmar</title>
+  <title data-i18n="meta.title">Muhammad Manjur Hasan Muammmar</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@650;700;750;760&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;650;700;750;760&family=Noto+Naskh+Arabic:wght@400;700&family=Noto+Sans+Bengali:wght@400;650;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script>
     (() => {
@@ -24,11 +26,12 @@
       document.documentElement.dataset.theme = mq.matches ? "dark" : "light";
     })();
   </script>
+  <script src="js/i18n.js" defer></script>
   <script src="js/script.js" defer></script>
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
 
   <header class="site-header">
     <div class="container nav-wrap">
@@ -36,14 +39,20 @@
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only" data-i18n="nav.toggle">Toggle navigation</span>
       </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+          <button type="button" class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
+          <button type="button" class="lang-btn" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+          <button type="button" class="lang-btn" data-lang="bn" aria-label="বাংলা">BN</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -52,31 +61,31 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Language • Education • Islamic Studies</p>
-          <h2>English–Arabic Language Trainer &amp; Islamic Education Mentor</h2>
-          <p class="hero-text">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Language • Education • Islamic Studies</p>
+          <h1 data-i18n="hero.title">English–Arabic Language Trainer &amp; Islamic Education Mentor</h1>
+          <p class="hero-text" data-i18n="hero.text">
             Hello world, this is Muhammad Hasan from Bangladesh. A language enthusiast and seeker of knowledge,
             with long experience teaching English, Arabic, and Islamic Studies to children.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#about">Explore profile</a>
-            <a class="button button-secondary" href="#contact">Get in touch</a>
+            <a class="button button-primary" href="#about" data-i18n="hero.ctaPrimary">Explore profile</a>
+            <a class="button button-secondary" href="#contact" data-i18n="hero.ctaSecondary">Get in touch</a>
           </div>
         </div>
 
         <aside class="hero-card" aria-label="Profile summary">
-          <div class="profile-mark">M</div>
+          <img class="profile-photo" src="assets/images/hasan-selfie.jpeg" alt="Portrait of Muhammad Hasan" width="220" height="220" loading="eager" decoding="async">
           <div>
-            <p class="card-label">Based in</p>
-            <p class="card-value">Bangladesh</p>
+            <p class="card-label" data-i18n="card.basedIn">Based in</p>
+            <p class="card-value" data-i18n="card.basedInValue">Bangladesh</p>
           </div>
           <div>
-            <p class="card-label">Focus</p>
-            <p class="card-value">Languages &amp; Islamic Education</p>
+            <p class="card-label" data-i18n="card.focus">Focus</p>
+            <p class="card-value" data-i18n="card.focusValue">Languages &amp; Islamic Education</p>
           </div>
           <div>
-            <p class="card-label">For</p>
-            <p class="card-value">Kids, families &amp; learners</p>
+            <p class="card-label" data-i18n="card.for">For</p>
+            <p class="card-value" data-i18n="card.forValue">Kids, families &amp; learners</p>
           </div>
         </aside>
       </div>
@@ -85,16 +94,16 @@
     <section id="about" class="section">
       <div class="container section-grid">
         <div>
-          <p class="section-number">01 / About</p>
-          <h2>A teacher, learner, and seeker of knowledge.</h2>
+          <p class="section-number" data-i18n="about.number">01 / About</p>
+          <h2 data-i18n="about.title">A teacher, learner, and seeker of knowledge.</h2>
         </div>
 
         <div class="section-content">
-          <p class="lead">
+          <p class="lead" data-i18n="about.lead">
             I currently hold two undergraduate degrees in Islamic Studies and have long experience
             teaching language and Islamic Studies subjects for children.
           </p>
-          <p>
+          <p data-i18n="about.body">
             My work sits at the intersection of language learning, Islamic education, and thoughtful
             content. I am particularly interested in making Classical Arabic, spoken English, Qur'an
             recitation, and foundational Islamic learning accessible and engaging for young learners
@@ -107,35 +116,35 @@
     <section id="skills" class="section section-muted">
       <div class="container">
         <div class="section-heading">
-          <p class="section-number">02 / Skills</p>
-          <h2>Areas of teaching and practice.</h2>
+          <p class="section-number" data-i18n="skills.number">02 / Skills</p>
+          <h2 data-i18n="skills.title">Areas of teaching and practice.</h2>
         </div>
 
         <div class="skills-grid">
           <article class="skill-card">
             <span class="skill-index">01</span>
-            <h3>Classical Arabic</h3>
-            <p>Teaching the foundations and practical reading of Classical Arabic.</p>
+            <h3 data-i18n="skills.s1.title">Classical Arabic</h3>
+            <p data-i18n="skills.s1.desc">Teaching the foundations and practical reading of Classical Arabic.</p>
           </article>
           <article class="skill-card">
             <span class="skill-index">02</span>
-            <h3>Spoken English</h3>
-            <p>Developing confident, practical English communication for learners.</p>
+            <h3 data-i18n="skills.s2.title">Spoken English</h3>
+            <p data-i18n="skills.s2.desc">Developing confident, practical English communication for learners.</p>
           </article>
           <article class="skill-card">
             <span class="skill-index">03</span>
-            <h3>Qur'an Tajwid</h3>
-            <p>Supporting children in Qur'an recitation and foundational Tajwid learning.</p>
+            <h3 data-i18n="skills.s3.title">Qur'an Tajwid</h3>
+            <p data-i18n="skills.s3.desc">Supporting children in Qur'an recitation and foundational Tajwid learning.</p>
           </article>
           <article class="skill-card">
             <span class="skill-index">04</span>
-            <h3>Kids' Islamic Learning</h3>
-            <p>Teaching age-appropriate Islamic Studies for children and families.</p>
+            <h3 data-i18n="skills.s4.title">Kids' Islamic Learning</h3>
+            <p data-i18n="skills.s4.desc">Teaching age-appropriate Islamic Studies for children and families.</p>
           </article>
           <article class="skill-card">
             <span class="skill-index">05</span>
-            <h3>Islamic Script-writing</h3>
-            <p>Writing and developing educational content for Islamic subjects.</p>
+            <h3 data-i18n="skills.s5.title">Islamic Script-writing</h3>
+            <p data-i18n="skills.s5.desc">Writing and developing educational content for Islamic subjects.</p>
           </article>
         </div>
       </div>
@@ -145,32 +154,32 @@
       <div class="container">
         <div class="section-heading projects-heading">
           <div>
-            <p class="section-number">03 / Projects</p>
-            <h2>Work in progress.</h2>
+            <p class="section-number" data-i18n="projects.number">03 / Projects</p>
+            <h2 data-i18n="projects.title">Work in progress.</h2>
           </div>
-          <p>Selected projects and future initiatives. Links are temporary placeholders.</p>
+          <p data-i18n="projects.subtitle">Selected projects and future initiatives. Links are temporary placeholders.</p>
         </div>
 
         <div class="projects-grid">
           <article class="project-card">
-            <span class="project-type">Coming soon</span>
+            <span class="project-type" data-i18n="projects.comingSoon">Coming soon</span>
             <h3>Lumma CS</h3>
-            <p>A placeholder for a future project, initiative, or educational platform.</p>
+            <p data-i18n="projects.p1.desc">A placeholder for a future project, initiative, or educational platform.</p>
           </article>
           <article class="project-card">
-            <span class="project-type">Coming soon</span>
-            <h3>Courses</h3>
-            <p>A future collection of language and Islamic education courses.</p>
+            <span class="project-type" data-i18n="projects.comingSoon">Coming soon</span>
+            <h3 data-i18n="projects.p2.title">Courses</h3>
+            <p data-i18n="projects.p2.desc">A future collection of language and Islamic education courses.</p>
           </article>
           <article class="project-card">
-            <span class="project-type">Coming soon</span>
-            <h3>Contents</h3>
-            <p>Articles, scripts, lessons, and educational content to be added.</p>
+            <span class="project-type" data-i18n="projects.comingSoon">Coming soon</span>
+            <h3 data-i18n="projects.p3.title">Contents</h3>
+            <p data-i18n="projects.p3.desc">Articles, scripts, lessons, and educational content to be added.</p>
           </article>
           <article class="project-card">
-            <span class="project-type">Coming soon</span>
-            <h3>Apps</h3>
-            <p>Future educational tools and applications for learners and families.</p>
+            <span class="project-type" data-i18n="projects.comingSoon">Coming soon</span>
+            <h3 data-i18n="projects.p4.title">Apps</h3>
+            <p data-i18n="projects.p4.desc">Future educational tools and applications for learners and families.</p>
           </article>
         </div>
       </div>
@@ -179,11 +188,11 @@
     <section id="contact" class="section contact-section section-muted">
       <div class="container contact-grid">
         <div>
-          <p class="section-number">04 / Contact</p>
-          <h2>Let’s connect.</h2>
+          <p class="section-number" data-i18n="contact.number">04 / Contact</p>
+          <h2 data-i18n="contact.title">Let’s connect.</h2>
         </div>
         <div>
-          <p class="lead">
+          <p class="lead" data-i18n="contact.lead">
             For teaching, educational collaboration, content work, or general enquiries, use one of
             the channels below.
           </p>
@@ -192,29 +201,29 @@
               <span class="contact-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
               </span>
-              <span>Email</span>
+              <span data-i18n="contact.email">Email</span>
               <strong>mhasanmuammar2@gmail.com</strong>
             </a>
             <a href="https://wa.me/+8801570282951" target="_blank" rel="noopener noreferrer">
               <span class="contact-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
               </span>
-              <span>WhatsApp</span>
+              <span data-i18n="contact.whatsapp">WhatsApp</span>
               <strong>+880 1570 282951</strong>
             </a>
             <a href="https://www.facebook.com/@manjur.muammar" target="_blank" rel="noopener noreferrer">
               <span class="contact-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
               </span>
-              <span>Facebook</span>
+              <span data-i18n="contact.facebook">Facebook</span>
               <strong>@manjur.muammar</strong>
             </a>
             <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
               <span class="contact-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               </span>
-              <span>LinkedIn</span>
-              <strong>LinkedIn Profile</strong>
+              <span data-i18n="contact.linkedin">LinkedIn</span>
+              <strong data-i18n="contact.linkedinValue">LinkedIn Profile</strong>
             </a>
           </div>
         </div>
@@ -224,8 +233,8 @@
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <p>© <span id="year"></span> Muhammad. All rights reserved.</p>
-      <a href="#">Back to top ↑</a>
+      <p>© <span id="year"></span> <span data-i18n="footer.name">Muhammad</span>. <span data-i18n="footer.rights">All rights reserved</span>.</p>
+      <a href="#" data-i18n="footer.top">Back to top ↑</a>
     </div>
   </footer>
 </body>
