@@ -14,7 +14,7 @@ A dependency-free personal landing page built with semantic HTML, modern CSS, an
 ## Run locally
 
 ```bash
-cd /var/home/hasan/Projects/muhammad-hasan
+cd ~/your-project-directory
 python3 -m http.server 8000
 ```
 
